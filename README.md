@@ -24,7 +24,7 @@ pip install -r requirements.txt
 4. **Reporting:** Automatically generate plots and PDF document that report on model metrics and diagnostics. Provide an API endpoint that can return model predictions and metrics.
 5. **Process Automation:** Create a script and cron job that automatically run all previous steps at regular intervals.
 
-<img src="images/process_flow_chart.jpg" width=550 height=300>
+<img src="images/process_flow_chart.png" width=550 height=300>
 
 ### The following are the Python files that are in the starter files:
 
