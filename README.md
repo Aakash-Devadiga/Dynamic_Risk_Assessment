@@ -1,12 +1,11 @@
 # Dynamic Risk Assessment System
-The fourth project for [ML DevOps Engineer Nanodegree](https://www.udacity.com/course/machine-learning-dev-ops-engineer-nanodegree--nd0821) by Udacity.
 
 ## Description
-This project is part of Unit 5: Machine Learning Model Scoring and Monitoring. The problem is to create, deploy, and monitor a risk assessment ML model that will estimate the attrition risk of each of the company's clients. Also setting up processes to re-train, re-deploy, monitor and report on the ML model.
+Machine Learning Model Scoring and Monitoring. The problem is to create, deploy, and monitor a risk assessment ML model that will estimate the attrition risk of each of the company's clients. Also setting up processes to re-train, re-deploy, monitor and report on the ML model.
 
 ## Prerequisites
 - Python 3 required
-- Linux environment may be needed within windows through WSL
+- Linux environment / Windows subsytem for Linux - WSL
 
 ## Dependencies
 This project dependencies is available in the ```requirements.txt``` file.
@@ -14,60 +13,8 @@ This project dependencies is available in the ```requirements.txt``` file.
 ## Installation
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the dependencies from the ```requirements.txt```. Its recommended to install it in a separate virtual environment.
 
-```bash
-pip install -r requirements.txt
 ```
-
-## Project Structure
-```bash
-📦Dynamic-Risk-Assessment-System
- ┣
- ┣ 📂data
- ┃ ┣ 📂ingesteddata                 # Contains csv and metadata of the ingested data
- ┃ ┃ ┣ 📜finaldata.csv
- ┃ ┃ ┗ 📜ingestedfiles.txt
- ┃ ┣ 📂practicedata                 # Data used for practice mode initially
- ┃ ┃ ┣ 📜dataset1.csv
- ┃ ┃ ┗ 📜dataset2.csv
- ┃ ┣ 📂sourcedata                   # Data used for production mode
- ┃ ┃ ┣ 📜dataset3.csv
- ┃ ┃ ┗ 📜dataset4.csv
- ┃ ┗ 📂testdata                     # Test data
- ┃ ┃ ┗ 📜testdata.csv
- ┣ 📂model
- ┃ ┣ 📂models                       # Models pickle, score, and reports for production mode
- ┃ ┃ ┣ 📜apireturns.txt
- ┃ ┃ ┣ 📜confusionmatrix.png
- ┃ ┃ ┣ 📜latestscore.txt
- ┃ ┃ ┣ 📜summary_report.pdf
- ┃ ┃ ┗ 📜trainedmodel.pkl
- ┃ ┣ 📂practicemodels               # Models pickle, score, and reports for practice mode
- ┃ ┃ ┣ 📜apireturns.txt
- ┃ ┃ ┣ 📜confusionmatrix.png
- ┃ ┃ ┣ 📜latestscore.txt
- ┃ ┃ ┣ 📜summary_report.pdf
- ┃ ┃ ┗ 📜trainedmodel.pkl
- ┃ ┗ 📂production_deployment        # Deployed models and model metadata needed
- ┃ ┃ ┣ 📜ingestedfiles.txt
- ┃ ┃ ┣ 📜latestscore.txt
- ┃ ┃ ┗ 📜trainedmodel.pkl
- ┣ 📂src
- ┃ ┣ 📜apicalls.py                  # Runs app endpoints
- ┃ ┣ 📜app.py                       # Flask app
- ┃ ┣ 📜config.py                    # Config file for the project which depends on config.json
- ┃ ┣ 📜deployment.py                # Model deployment script
- ┃ ┣ 📜diagnostics.py               # Model diagnostics script
- ┃ ┣ 📜fullprocess.py               # Process automation
- ┃ ┣ 📜ingestion.py                 # Data ingestion script
- ┃ ┣ 📜pretty_confusion_matrix.py   # Plots confusion matrix
- ┃ ┣ 📜reporting.py                 # Generates confusion matrix and PDF report
- ┃ ┣ 📜scoring.py                   # Scores trained model
- ┃ ┣ 📜training.py                  # Model training
- ┃ ┗ 📜wsgi.py
- ┣ 📜config.json                    # Config json file
- ┣ 📜cronjob.txt                    # Holds cronjob created for automation
- ┣ 📜README.md
- ┗ 📜requirements.txt               # Projects required dependencies
+pip install -r requirements.txt
 ```
 
 ## Steps Overview
@@ -78,6 +25,19 @@ pip install -r requirements.txt
 5. **Process Automation:** Create a script and cron job that automatically run all previous steps at regular intervals.
 
 <img src="images/fullprocess.jpg" width=550 height=300>
+
+### The following are the Python files that are in the starter files:
+
+training.py, a Python script meant to train an ML model
+scoring.py, a Python script meant to score an ML model
+deployment.py, a Python script meant to deploy a trained ML model
+ingestion.py, a Python script meant to ingest new data
+diagnostics.py, a Python script meant to measure model and data diagnostics
+reporting.py, a Python script meant to generate reports about model metrics
+app.py, a Python script meant to contain API endpoints
+wsgi.py, a Python script to help with API deployment
+apicalls.py, a Python script meant to call your API endpoints
+fullprocess.py, a script meant to determine whether a model needs to be re-deployed, and to call all other Python scripts when needed
 
 ## Usage
 
@@ -197,14 +157,3 @@ sudo crontab -l
 
 ## License
 Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. See ```LICENSE``` for more information.
-
-## Resources
-
-- Flask
-  - https://pythonbasics.org/flask-http-methods/
-  - https://www.sqlshack.com/create-rest-apis-in-python-using-flask/
-  - https://medium.com/@shanakachathuranga/end-to-end-machine-learning-pipeline-with-mlops-tools-mlflow-dvc-flask-heroku-evidentlyai-github-c38b5233778c
-
-- Reportlab
-  - https://www.youtube.com/playlist?list=PLOGAj7tCqHx-IDg2x6cWzqN0um8Z4plQT
-  - https://www.reportlab.com/docs/reportlab-userguide.pdf
