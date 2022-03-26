@@ -29,6 +29,7 @@ pip install -r requirements.txt
 ### The following are the Python files that are in the starter files:
 
 training.py, a Python script meant to train an ML model
+
 scoring.py, a Python script meant to score an ML model
 deployment.py, a Python script meant to deploy a trained ML model
 ingestion.py, a Python script meant to ingest new data
