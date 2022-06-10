@@ -1,8 +1,3 @@
-"""
-Author: Ibrahim Sherif
-Date: December, 2021
-This script used for ingesting data
-"""
 import os
 import sys
 import logging
