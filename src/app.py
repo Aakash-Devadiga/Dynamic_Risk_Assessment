@@ -1,8 +1,3 @@
-"""
-Author: Ibrahim Sherif
-Date: December, 2021
-This script used to create the app Flask API
-"""
 import re
 import subprocess
 import pandas as pd
