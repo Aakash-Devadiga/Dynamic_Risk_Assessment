@@ -1,8 +1,3 @@
-"""
-Author: Ibrahim Sherif
-Date: December, 2021
-This script used for training model on the ingested data
-"""
 import os
 import sys
 import pickle
