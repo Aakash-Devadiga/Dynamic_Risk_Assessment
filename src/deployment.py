@@ -1,8 +1,3 @@
-"""
-Author: Ibrahim Sherif
-Date: December, 2021
-This script used to deploy the trained model
-"""
 import os
 import sys
 import shutil
