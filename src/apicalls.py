@@ -1,12 +1,3 @@
-"""
-Author: Ibrahim Sherif
-Date: December, 2021
-This script used to call the APIs and generate a report file that includes
-Model predictions and scores on test data
-Summary statistics and missing data percentage on ingested train data
-Execution time for training and ingestion functions
-Outdated packages list
-"""
 import os
 import sys
 import logging
