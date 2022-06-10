@@ -1,9 +1,3 @@
-"""
-Author: Ibrahim Sherif
-Date: December, 2021
-This script used to generate a confusion matrix and
-generate PDF report
-"""
 import os
 import sys
 import logging
